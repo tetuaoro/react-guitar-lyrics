@@ -22,3 +22,7 @@ yarn-error.log*
 
 # Webstorm
 .idea
+
+# bit.dev
+/dist
+.bitmap
