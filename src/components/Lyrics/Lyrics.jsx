@@ -94,9 +94,9 @@ export default class Lyrics extends PureComponent {
                           <Chord chord={chord} options={{ size: "small" }} />
                         </span>
                       ) : (
-                        <sup className="ge-anchor-chordname">
+                        <span className="ge-anchor-chordname">
                           {chordData.name}
-                        </sup>
+                        </span>
                       )}
                       {/* Anchor Text */}
                       <span className="gd-anchor">{chordData.anchor}</span>

@@ -25,4 +25,4 @@ yarn-error.log*
 
 # bit.dev
 /dist
-.bitmap
+/.bitmap
