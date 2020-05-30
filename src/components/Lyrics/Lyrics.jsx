@@ -72,7 +72,7 @@ export default class Lyrics extends PureComponent {
    */
   mapAnchorStyle = (anchor, index) => {
     return {
-      width: isMajorChar.test(anchor) ? 0.8 + 'em' : 0.5 + 'em',
+      width: isMajorChar.test(anchor) ? 0.8 + 'em' : 0.4 + 'em',
     };
   };
 

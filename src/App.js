@@ -51,6 +51,7 @@ class App extends Component {
         <Lyrics isEmbedChord={embed} chordStyle={config}>Je m[F]i sens libre[F] </Lyrics>
         <Lyrics isEmbedChord={embed} chordStyle={config}>Je me[J] sens libre</Lyrics>
         <Lyrics isEmbedChord={embed} chordStyle={config}>Je me sens libr[G]e</Lyrics>
+        <Lyrics isEmbedChord={embed} chordStyle={config}>Je me l[F]e sens [G]libre</Lyrics>
         <Lyrics isEmbedChord={embed} chordStyle={config}>[G]   [D] Je suis donc [G] </Lyrics>
       </div>
     );
