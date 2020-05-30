@@ -32,8 +32,9 @@ export default class Lyrics extends PureComponent {
     let chords = [];
     let offset = 2;
 
+    // if line is an props
     if (typeof line !== 'string') {
-      line = line.toString();    
+      line = line.toString();
     }
 
     // Extract information from a piece of lyrics
@@ -63,17 +64,18 @@ export default class Lyrics extends PureComponent {
   };
 
   render() {
-    const { children, isEmbedChord } = this.props;
+    const { children, isEmbedChord, chordStyle } = this.props;
 
     const style = {
+      display: "inline-block",
       backgroundColor: "red",
       color: "white",
     };
 
     return (
       <div>
-        {/* The offset to split each lyrics when the chord is embeded */}
-        {isEmbedChord && <div style={{ height: 30 }} />}
+        {/* The offset to split each lyrics when the chord is embeded, uncomment to make it */}
+        {/* {isEmbedChord && <div style={{ height: 30 }} />} */}
         <p className="ge-lyrics">
           {
             // Map each chord data to the lyrics
@@ -96,9 +98,12 @@ export default class Lyrics extends PureComponent {
                       {isEmbedChord ? (
                         <span className="ge-anchor-chordimg">
                           <Chord chord={chord} options={{ size: "small" }} />
+                          <span className="ge-test">
+                            <Chord chord={chord} options={{ size: "large" }} />
+                          </span>
                         </span>
                       ) : (
-                          <span className="ge-anchor-chordname">
+                          <span className="ge-anchor-chordname" style={chordStyle}>
                             {chordData.name}
                           </span>
                         )}
@@ -129,6 +134,10 @@ export default class Lyrics extends PureComponent {
 
 Lyrics.propTypes = {
   isEmbedChord: PropTypes.bool,
+  chordStyle: PropTypes.shape({
+    colorChord: PropTypes.string,
+
+  })
 };
 
 Lyrics.defaultProps = {

@@ -19,7 +19,7 @@ const chordConfig = {
     title: {
       x: 23,
       y: 9.333333333333334,
-      fontSize: 9
+      fontSize: 13
     },
 
     origin: {
@@ -47,7 +47,7 @@ const chordConfig = {
     title: {
       x: 46,
       y: 15.333333333333332,
-      fontSize: 13
+      fontSize: 18
     },
 
     origin: {

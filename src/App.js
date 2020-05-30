@@ -15,7 +15,7 @@ class App extends Component {
 
   componentDidMount() {
     this.setState({
-      embed: false,
+      embed: true,
     });
   }
 
@@ -34,10 +34,12 @@ class App extends Component {
           defaultChecked={false}
           onChange={this.handleEmbedChord}
         />
-        <Lyrics isEmbedChord={embed}>Je m'[G]w qens libre</Lyrics>
+        <Lyrics isEmbedChord={embed}>Je me[G] sens libre</Lyrics>
         <Lyrics isEmbedChord={embed}>
           [C]Et je suis, t[F]u es, et [Gm]rien
         </Lyrics>
+        <Lyrics isEmbedChord={embed}>Je m[F]i sens libre</Lyrics>
+        <Lyrics isEmbedChord={embed}>Je me[J] sens libre</Lyrics>
       </div>
     );
   }

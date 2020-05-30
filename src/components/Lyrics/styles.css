@@ -1,47 +1,26 @@
 .ge-lyrics {
-  display: inline-flex;
-  align-items: center;
   margin-bottom: 0;
+  white-space: pre-wrap;
 }
 
-.ge-lyrics .ge-chord-item {
-  margin: 0 0;
-  display: inline-flex;
-  align-items: center;
-}
-
-/* Anchor for each character */
-.ge-lyrics .ge-anchor {
-  position: relative;
+.ge-lyrics span {
   display: inline-block;
-  height: 25px;
-  line-height: 1.62em;
 }
 
-/* Chord name above anchor */
 .ge-lyrics .ge-anchor .ge-anchor-chordname {
-  position: absolute;
-  top: -18px;
-  color: indianred;
-  font-size: 1em;
-  font-weight: 520;
-}
-
-/* Chord image above anchor */
-.ge-lyrics .ge-anchor .ge-anchor-chordimg {
-  position: absolute;
-  top: -45px;
-  left: -10px;
+  position: relative;
+  font-weight: 510;
   color: indianred;
 }
 
-.ge-lyrics .ge-extra {
-  display: inline-block;
-  height: 25px;
-  line-height: 1.62em;
+.ge-lyrics .ge-test {
+  display: none;
+}
+/*.ge-lyrics .ge-anchor-chordimg:hover ~ .ge-test*/
+/*.ge-lyrics .ge-anchor-chordimg:hover + .ge-test*/
+.ge-lyrics .ge-anchor-chordimg:hover > .ge-test {
+  display: block;
+  position: absolute;
 }
 
-.ge-lyrics .gd-anchor {
-
-}
 
