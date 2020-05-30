@@ -26,7 +26,7 @@ const searchChord = (name) => {
 
 /**
  *
- * Rendering your chords between bracket ans styling with custom props
+ * Rendering your chords between bracket and styling with custom props
  * 
  * @param {Boolean} [isEmbedChord=false] - 2 display modes : letter chord or image svg chord
  * @param {Object} [chordStyle] - custom chord with color and font-weight
