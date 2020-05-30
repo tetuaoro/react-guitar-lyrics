@@ -9,16 +9,15 @@
 
 .ge-lyrics .ge-anchor .ge-anchor-chordname {
   position: relative;
-  font-weight: 510;
-  color: indianred;
 }
 
-.ge-lyrics .ge-test {
+.ge-lyrics .ge-anchor-chordimg-large {
   display: none;
 }
-/*.ge-lyrics .ge-anchor-chordimg:hover ~ .ge-test*/
-/*.ge-lyrics .ge-anchor-chordimg:hover + .ge-test*/
-.ge-lyrics .ge-anchor-chordimg:hover > .ge-test {
+
+/*.ge-lyrics .ge-anchor-chordimg:hover ~ .ge-anchor-chordimg-large*/
+/*.ge-lyrics .ge-anchor-chordimg:hover + .ge-anchor-chordimg-large*/
+.ge-lyrics .ge-anchor-chordimg:hover > .ge-anchor-chordimg-large {
   display: block;
   position: absolute;
 }

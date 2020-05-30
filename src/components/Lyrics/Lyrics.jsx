@@ -24,6 +24,19 @@ const searchChord = (name) => {
   }
 };
 
+/**
+ *
+ * Rendering your chords between bracket ans styling with custom props
+ * 
+ * @param {Boolean} [isEmbedChord=false] - 2 display modes : letter chord or image svg chord
+ * @param {Object} [chordStyle] - custom chord with color and font-weight
+ * @param {String} [chordStyle.color] - the color 
+ * @param {Number} [chordStyle.fontWeight] - the font-weight 
+ *
+ * @export
+ * @class Lyrics
+ * @extends {PureComponent}
+ */
 export default class Lyrics extends PureComponent {
   /**
    * Method to map chords inside the string
@@ -98,7 +111,7 @@ export default class Lyrics extends PureComponent {
                       {isEmbedChord ? (
                         <span className="ge-anchor-chordimg">
                           <Chord chord={chord} options={{ size: "small" }} />
-                          <span className="ge-test">
+                          <span className="ge-anchor-chordimg-large">
                             <Chord chord={chord} options={{ size: "large" }} />
                           </span>
                         </span>
@@ -135,11 +148,15 @@ export default class Lyrics extends PureComponent {
 Lyrics.propTypes = {
   isEmbedChord: PropTypes.bool,
   chordStyle: PropTypes.shape({
-    colorChord: PropTypes.string,
-
+    color: PropTypes.string,
+    fontWeight: PropTypes.number,
   })
 };
 
 Lyrics.defaultProps = {
   isEmbedChord: false,
+  chordStyle: {
+    color: 'indianred',
+    fontWeight: 510,
+  }
 };
