@@ -4,13 +4,8 @@
   margin-bottom: 0;
 }
 
-.ge-lyrics span,
-.ge-lyrics p {
-  letter-spacing: 0;
-}
-
 .ge-lyrics .ge-chord-item {
-  margin: 5px 0;
+  margin: 0 0;
   display: inline-flex;
   align-items: center;
 }
@@ -20,17 +15,16 @@
   position: relative;
   display: inline-block;
   height: 25px;
-  line-height: 1.67em;
-  /*border-bottom: 1px solid #24292e;*/
+  line-height: 1.62em;
 }
 
 /* Chord name above anchor */
 .ge-lyrics .ge-anchor .ge-anchor-chordname {
   position: absolute;
   top: -18px;
-  letter-spacing: 1px;
   color: indianred;
   font-size: 1em;
+  font-weight: 520;
 }
 
 /* Chord image above anchor */
@@ -44,5 +38,10 @@
 .ge-lyrics .ge-extra {
   display: inline-block;
   height: 25px;
-  line-height: 1.68em;
+  line-height: 1.62em;
 }
+
+.ge-lyrics .gd-anchor {
+
+}
+

@@ -12,7 +12,7 @@ import chords from "../../assets/chords";
 
 // Define regular expression to get the chord
 const chordRegExp = /(?:\[([^\]]*)])?(.)?([^[]*)/g;
-const englishRegExp = /[a-zA-Z]/;
+const isMajorChar = /[A-Z]/;
 
 const searchChord = (name) => {
   let chordsLen = chords.length;
@@ -31,6 +31,10 @@ export default class Lyrics extends PureComponent {
   mapChords = (line) => {
     let chords = [];
     let offset = 2;
+
+    if (typeof line !== 'string') {
+      line = line.toString();    
+    }
 
     // Extract information from a piece of lyrics
     line.replace(chordRegExp, (match, chord, anchor, extra, index) => {
@@ -54,7 +58,7 @@ export default class Lyrics extends PureComponent {
    */
   mapAnchorStyle = (anchor, index) => {
     return {
-      width: englishRegExp.test(anchor) ? 10 : 15,
+      width: isMajorChar.test(anchor) ? 0.8 + 'em' : 0.5 + 'em',
     };
   };
 
@@ -94,27 +98,27 @@ export default class Lyrics extends PureComponent {
                           <Chord chord={chord} options={{ size: "small" }} />
                         </span>
                       ) : (
-                        <span className="ge-anchor-chordname">
-                          {chordData.name}
-                        </span>
-                      )}
+                          <span className="ge-anchor-chordname">
+                            {chordData.name}
+                          </span>
+                        )}
                       {/* Anchor Text */}
                       <span className="gd-anchor">{chordData.anchor}</span>
                     </span>
                     <span className="ge-extra">{chordData.extra}</span>
                   </span>
                 ) : (
-                  <span key={index} style={style}>
-                    Verifier vos notes de musiques.
-                  </span>
-                )
+                    <span key={index} style={style}>
+                      Verifier vos notes de musiques.
+                    </span>
+                  )
               ) : (
-                // Normal sentence
-                <span key={index}>
-                  <span>{chordData.anchor}</span>
-                  <span>{chordData.extra}</span>
-                </span>
-              );
+                  // Normal sentence
+                  <span key={index}>
+                    <span>{chordData.anchor}</span>
+                    <span>{chordData.extra}</span>
+                  </span>
+                );
             })
           }
         </p>
