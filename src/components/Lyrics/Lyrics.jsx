@@ -24,7 +24,8 @@ const searchChord = (name) => {
  *
  * Rendering your chords between bracket and styling with custom props
  * 
- * @param {Object} [chordStyle] - styling with your own css
+ * @param {Object} [chordStyle] - styling chords with your own css
+ * @param {Object} [LineStyle] - styling lines with your own css
  *
  * @export
  * @class Lyrics
