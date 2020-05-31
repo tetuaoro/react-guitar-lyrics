@@ -1,25 +1,23 @@
 .ge-lyrics {
-  margin-bottom: 0;
-  white-space: pre-wrap;
-}
-
-.ge-lyrics span {
-  display: inline-block;
+  position: relative;
+  font-family: inherit;
+  margin: 1rem auto 0;
 }
 
 .ge-lyrics .ge-anchor .ge-anchor-chordname {
-  position: relative;
-}
-
-.ge-lyrics .ge-anchor-chordimg-large {
-  display: none;
-}
-
-/*.ge-lyrics .ge-anchor-chordimg:hover ~ .ge-anchor-chordimg-large*/
-/*.ge-lyrics .ge-anchor-chordimg:hover + .ge-anchor-chordimg-large*/
-.ge-lyrics .ge-anchor-chordimg:hover > .ge-anchor-chordimg-large {
-  display: block;
   position: absolute;
+  top: -1rem;
 }
 
+.ge-error-chord {
+  background-color: crimson;
+  color: aliceblue;
+}
 
+.ge-error-chord::after {
+  content: "_";
+}
+
+.ge-error-chord::before {
+  content: "_";
+}
