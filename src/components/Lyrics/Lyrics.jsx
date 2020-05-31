@@ -62,11 +62,11 @@ export default class Lyrics extends PureComponent {
 
   render() {
 
-    const { children, chordStyle } = this.props;
+    const { children, chordStyle, LineStyle } = this.props;
 
     return (
       <div>
-        <pre className="ge-lyrics">
+        <pre className="ge-lyrics" style={LineStyle}>
           {
             this.mapChords(children).map((chordData, index) => {
               let chord = searchChord(chordData.name);
@@ -106,6 +106,7 @@ export default class Lyrics extends PureComponent {
 
 Lyrics.propTypes = {
   chordStyle: PropTypes.object,
+  LineStyle: PropTypes.object,
 };
 
 Lyrics.defaultProps = {
