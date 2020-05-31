@@ -25,7 +25,7 @@ const searchChord = (name) => {
  * Rendering your chords between bracket and styling with custom props
  * 
  * @param {Object} [chordStyle] - styling chords with your own css
- * @param {Object} [LineStyle] - styling lines with your own css
+ * @param {Object} [lineStyle] - styling lines with your own css
  *
  * @export
  * @class Lyrics
@@ -63,11 +63,11 @@ export default class Lyrics extends PureComponent {
 
   render() {
 
-    const { children, chordStyle, LineStyle } = this.props;
+    const { children, chordStyle, lineStyle } = this.props;
 
     return (
       <div>
-        <pre className="ge-lyrics" style={LineStyle}>
+        <pre className="ge-lyrics" style={lineStyle}>
           {
             this.mapChords(children).map((chordData, index) => {
               let chord = searchChord(chordData.name);
@@ -107,7 +107,7 @@ export default class Lyrics extends PureComponent {
 
 Lyrics.propTypes = {
   chordStyle: PropTypes.object,
-  LineStyle: PropTypes.object,
+  lineStyle: PropTypes.object,
 };
 
 Lyrics.defaultProps = {
